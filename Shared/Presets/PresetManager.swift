@@ -26,6 +26,9 @@ public final class PresetManager {
     /// Convenience: factory + user, grouped.
     public var allPresets: [Preset] { factoryPresets + userPresets }
 
+    // Serialises concurrent save/delete calls so neither overwrites the other.
+    private let persistQueue = DispatchQueue(label: "com.3csynth.presets")
+
     // MARK: Init
 
     public init() {
@@ -36,20 +39,24 @@ public final class PresetManager {
     // MARK: Persistence
 
     public func save(preset: Preset) throws {
-        var presets = userPresets
-        if let existing = presets.firstIndex(where: { $0.id == preset.id }) {
-            presets[existing] = preset
-        } else {
-            presets.append(preset)
+        try persistQueue.sync {
+            var presets = userPresets
+            if let existing = presets.firstIndex(where: { $0.id == preset.id }) {
+                presets[existing] = preset
+            } else {
+                presets.append(preset)
+            }
+            try persist(presets)
+            userPresets = presets
         }
-        try persist(presets)
-        userPresets = presets
     }
 
     public func delete(preset: Preset) throws {
-        let updated = userPresets.filter { $0.id != preset.id }
-        try persist(updated)
-        userPresets = updated
+        try persistQueue.sync {
+            let updated = userPresets.filter { $0.id != preset.id }
+            try persist(updated)
+            userPresets = updated
+        }
     }
 
     // MARK: Private Persistence

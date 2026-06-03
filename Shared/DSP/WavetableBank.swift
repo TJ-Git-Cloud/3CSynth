@@ -72,7 +72,8 @@ public final class WavetableBank {
                        frequency: Float,
                        sampleRate: Float) -> Float {
 
-        let index = tableIndex % max(entries.count, 1)
+        guard !entries.isEmpty else { return 0 }
+        let index = tableIndex % entries.count
         let entry = entries[index]
         let mipLevel = selectMipLevel(frequency: frequency, sampleRate: sampleRate)
         let table = entry.mips[mipLevel]

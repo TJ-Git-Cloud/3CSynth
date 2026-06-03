@@ -61,19 +61,16 @@ struct HybridOscillator {
 
     // MARK: Frequency Helpers
 
-    /// Returns the effective frequency after applying octave and detune.
-    var effectiveFrequency: Float {
-        let octaveFactor = Float(pow(2.0, Double(octave)))
-        let detuneFactor = Float(pow(2.0, Double(detune) / 1200.0))
-        return frequency * octaveFactor * detuneFactor
+    /// Shared scale factor: octave shift × detune in cents.
+    private var detunedScale: Float {
+        Float(pow(2.0, Double(octave))) * Float(pow(2.0, Double(detune) / 1200.0))
     }
 
-    /// Returns a detuned frequency relative to a base frequency (for osc2 spread).
-    func detuneFrequency(base: Float) -> Float {
-        let octaveFactor = Float(pow(2.0, Double(octave)))
-        let detuneFactor = Float(pow(2.0, Double(detune) / 1200.0))
-        return base * octaveFactor * detuneFactor
-    }
+    /// Returns the effective frequency after applying octave and detune.
+    var effectiveFrequency: Float { frequency * detunedScale }
+
+    /// Returns a detuned frequency relative to `base` (used for osc2 spread).
+    func detuneFrequency(base: Float) -> Float { base * detunedScale }
 
     // MARK: Rendering
 

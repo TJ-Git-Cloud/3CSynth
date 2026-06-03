@@ -84,14 +84,12 @@ struct StateVariableFilter {
         if isDirty { updateCoefficients() }
 
         for i in 0 ..< frameCount {
-            let input = buffer[i]
-            let (lp, _, _) = tick(input: input)
-
+            let (lp, bp, hp) = tick(input: buffer[i])
             switch filterMode {
             case .lowPass:  buffer[i] = lp
-            case .bandPass: buffer[i] = tick(input: input).bp
-            case .highPass: buffer[i] = tick(input: input).hp
-            case .notch:    buffer[i] = lp + tick(input: input).hp
+            case .bandPass: buffer[i] = bp
+            case .highPass: buffer[i] = hp
+            case .notch:    buffer[i] = lp + hp
             }
         }
     }

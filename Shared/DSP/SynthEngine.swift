@@ -50,8 +50,6 @@ public final class SynthEngine {
     private var modWheel: Float = 0.0             // 0…1
     private var masterVolume: Float = 0.8
 
-    // Pre-allocated mix buffer avoids heap allocation on the audio thread.
-    private var mixBuffer: [Float]
     private let maxFramesPerSlice: Int = 4096
 
     // MARK: Init
@@ -61,9 +59,6 @@ public final class SynthEngine {
         parameters = SynthParameters()
 
         voices = (0 ..< k3CSynthMaxVoices).map { _ in Voice() }
-
-        // Allocate stereo mix buffer once.
-        mixBuffer = [Float](repeating: 0, count: k3CSynthMaxVoices * 2)
     }
 
     // MARK: Configuration

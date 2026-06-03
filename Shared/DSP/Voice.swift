@@ -47,7 +47,6 @@ final class Voice {
 
     // Per-voice render scratch buffer avoids allocations on the audio thread.
     private var scratchL: [Float]
-    private var scratchR: [Float]
     private let maxFrames = 4096
 
     // MARK: Init
@@ -60,7 +59,6 @@ final class Voice {
         filterEnvelope  = ADSREnvelope()
         lfo1            = LFO()
         scratchL        = [Float](repeating: 0, count: maxFrames)
-        scratchR        = [Float](repeating: 0, count: maxFrames)
     }
 
     // MARK: Configuration
@@ -171,7 +169,15 @@ final class Voice {
 
         let n = min(frameCount, maxFrames)
 
-        // Zero scratch buffers.
+        // --- LFO pitch modulation: update frequencies before rendering ---
+        let lfoValue = lfo1.nextSample()
+        let pitchFactor = pow(2.0, lfoValue / 12.0)
+        let bendFactor  = pitchBendFactor()
+        let modBase = baseFrequency * pitchFactor * bendFactor
+        oscillator1.frequency = modBase
+        oscillator2.frequency = oscillator2.detuneFrequency(base: modBase)
+
+        // Zero scratch buffer.
         scratchL.withUnsafeMutableBufferPointer { buf in
             vDSP_vclr(buf.baseAddress!, 1, vDSP_Length(n))
         }
@@ -179,14 +185,6 @@ final class Voice {
         // --- Oscillators ---
         oscillator1.render(into: &scratchL, frameCount: n)
         oscillator2.render(into: &scratchL, frameCount: n)  // summed
-
-        // --- LFO pitch modulation ---
-        let lfoValue = lfo1.nextSample()   // scalar for simplicity
-        let pitchFactor = pow(2.0, lfoValue / 12.0)
-        oscillator1.frequency = baseFrequency * pitchFactor * pitchBendFactor()
-        oscillator2.frequency = oscillator2.detuneFrequency(
-            base: baseFrequency * pitchFactor * pitchBendFactor()
-        )
 
         // --- Filter envelope modulation ---
         let filterEnvValue = filterEnvelope.nextSample()
