@@ -1,0 +1,238 @@
+# project.yml
+# 3CSynth — XcodeGen project specification
+#
+# Install XcodeGen:  brew install xcodegen
+# Generate project:  cd ~/Downloads/3CSynth && xcodegen generate
+#
+# Then open: open 3CSynth.xcodeproj
+#
+# ─────────────────────────────────────────────────────────────────────────────
+
+name: 3CSynth
+
+options:
+  bundleIdPrefix: com.3csynth
+  deploymentTarget:
+    iOS: "17.0"
+    macOS: "14.0"
+  createIntermediateGroups: true
+  defaultConfig: Debug
+  xcodeVersion: "16.0"
+
+# ─── Global build settings ────────────────────────────────────────────────────
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: "YOURTEAMID"          # ← paste your 10-char Team ID here
+
+# ─── Configs ──────────────────────────────────────────────────────────────────
+configs:
+  Debug:   debug
+  Release: release
+
+# ─── Targets ──────────────────────────────────────────────────────────────────
+targets:
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # 3CSynthComponent  —  Classic .component bundle for Logic Pro on macOS 26+
+  # Installs automatically to ~/Library/Audio/Plug-Ins/Components/ after build.
+  # Logic Pro scans this folder directly — no pluginkit registration needed.
+  # ───────────────────────────────────────────────────────────────────────────
+  3CSynthComponent:
+    type: bundle
+    platform: macOS
+    deploymentTarget: "14.0"
+
+    sources:
+      - path: Shared
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+          - "MIDI/MIDIProcessor.swift"
+          - "Views/PresetsView.swift"
+      - path: 3CSynthComponent
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+
+    settings:
+      base:
+        PRODUCT_NAME: 3CSynth
+        WRAPPER_EXTENSION: component
+        MACH_O_TYPE: mh_dylib
+        PRODUCT_BUNDLE_IDENTIFIER: com.3csynth.component
+        PRODUCT_MODULE_NAME: ThreeCSynthComponent
+        INFOPLIST_FILE: 3CSynthComponent/Info.plist
+        CODE_SIGN_ENTITLEMENTS: 3CSynthComponent/3CSynthComponent.entitlements
+
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: AudioToolbox.framework
+      - sdk: CoreAudioKit.framework
+      - sdk: Accelerate.framework
+
+    # Auto-install to ~/Library/Audio/Plug-Ins/Components/ after every build.
+    postBuildScripts:
+      - name: Install Component
+        basedOnDependencyAnalysis: false
+        script: |
+          DEST="${HOME}/Library/Audio/Plug-Ins/Components"
+          mkdir -p "${DEST}"
+          cp -Rf "${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}" "${DEST}/"
+          echo "✅ Installed ${WRAPPER_NAME} to ${DEST}"
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # 3CSynthAU  —  AUv3 App Extension (iOS)
+  # ───────────────────────────────────────────────────────────────────────────
+  3CSynthAU:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "17.0"
+
+    sources:
+      - path: Shared
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+          - "Views/PresetsView.swift"     # needs @Observable PresetManager bridge
+      - path: 3CSynthAU
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.3csynth.ios.au
+        INFOPLIST_FILE: 3CSynthAU/Info.plist
+        SKIP_INSTALL: YES
+
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: AudioToolbox.framework
+      - sdk: CoreAudioKit.framework
+      - sdk: Accelerate.framework
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # 3CSynthIOS  —  Standalone iOS / iPadOS app
+  # ───────────────────────────────────────────────────────────────────────────
+  3CSynthIOS:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+
+    sources:
+      # Shared DSP, parameters, presets, MIDI, and cross-platform views
+      - path: Shared
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+
+      # iOS-only files: app entry, root layout, UIKit keyboard
+      - path: 3CSynthIOS
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+          # These are now in Shared/Views — exclude the old copies to avoid duplicates
+          - "Views/DesignSystem.swift"
+          - "Views/OscillatorSection.swift"
+          - "Views/FilterSection.swift"
+          - "Views/EnvelopeSection.swift"
+          - "Views/ModulationSection.swift"
+          - "Views/EffectsSection.swift"
+          - "Views/KnobView.swift"
+          - "Views/PresetsView.swift"
+          - "Views/SynthView.swift"
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.3csynth.ios
+        INFOPLIST_FILE: 3CSynthIOS/Info.plist
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/Frameworks"
+
+    dependencies:
+      - target: 3CSynthAU
+        embed: true
+        codeSign: true
+      - sdk: AVFoundation.framework
+      - sdk: AudioToolbox.framework
+      - sdk: CoreAudioKit.framework
+      - sdk: Accelerate.framework
+      - sdk: CoreMIDI.framework
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # 3CSynthAUMac  —  AUv3 App Extension (macOS) — loads in Logic Pro on Mac
+  # ───────────────────────────────────────────────────────────────────────────
+  3CSynthAUMac:
+    type: app-extension
+    platform: macOS
+    deploymentTarget: "14.0"
+
+    sources:
+      - path: Shared
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+          - "MIDI/MIDIProcessor.swift"   # iOS CoreMIDI lifecycle
+          - "Views/PresetsView.swift"    # not needed in the plug-in UI
+      - path: 3CSynthAUMac
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.3csynth.mac.au
+        PRODUCT_MODULE_NAME: ThreeCSynthAUMac
+        INFOPLIST_FILE: 3CSynthAUMac/Info.plist
+        CODE_SIGN_ENTITLEMENTS: 3CSynthAUMac/3CSynthAUMac.entitlements
+        SKIP_INSTALL: YES
+
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: AudioToolbox.framework
+      - sdk: CoreAudioKit.framework
+      - sdk: Accelerate.framework
+
+  # ───────────────────────────────────────────────────────────────────────────
+  # 3CSynthMac  —  Native macOS companion app (container for 3CSynthAUMac)
+  # ───────────────────────────────────────────────────────────────────────────
+  3CSynthMac:
+    type: application
+    platform: macOS
+    deploymentTarget: "14.0"
+
+    sources:
+      # Shared DSP, parameters, presets, and cross-platform views
+      - path: Shared
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+          - "MIDI/MIDIProcessor.swift"   # uses iOS CoreMIDI lifecycle
+
+      # macOS-only files
+      - path: 3CSynthMac
+        createIntermediateGroups: true
+        excludes:
+          - "**/.DS_Store"
+
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.3csynth.mac
+        INFOPLIST_FILE: 3CSynthMac/Info.plist
+        CODE_SIGN_ENTITLEMENTS: 3CSynthMac/3CSynthMac.entitlements
+        LD_RUNPATH_SEARCH_PATHS: "$(inherited) @executable_path/../Frameworks"
+
+    dependencies:
+      - target: 3CSynthAUMac   # embeds the AUv3 so Logic Pro can discover it
+        embed: true
+        codeSign: true
+      - sdk: AVFoundation.framework
+      - sdk: AudioToolbox.framework
+      - sdk: CoreAudioKit.framework
+      - sdk: Accelerate.framework
+      - sdk: CoreMIDI.framework

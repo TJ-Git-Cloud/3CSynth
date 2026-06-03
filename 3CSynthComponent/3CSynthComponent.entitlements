@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- .component bundles are not app-sandboxed themselves;
+         sandboxSafe=true in the AudioComponents plist entry allows
+         Logic Pro to load them inside its own sandbox. -->
+</dict>
+</plist>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>3CSynth</string>
+
+    <key>CFBundleName</key>
+    <string>$(PRODUCT_NAME)</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+
+    <key>CFBundleVersion</key>
+    <string>$(CURRENT_PROJECT_VERSION)</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
+
+    <key>CFBundleDevelopmentRegion</key>
+    <string>en</string>
+
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+
+    <!-- Required for AVAudioEngine output -->
+    <key>NSMicrophoneUsageDescription</key>
+    <string>3CSynth uses the microphone for live audio input processing.</string>
+
+    <!-- App Sandbox entitlement (required for Mac App Store / notarisation) -->
+    <key>com.apple.security.app-sandbox</key>
+    <true/>
+
+    <!-- Allow audio device access inside the sandbox -->
+    <key>com.apple.security.device.audio-input</key>
+    <true/>
+
+    <key>LSMinimumSystemVersion</key>
+    <string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright © 2026 3CSynth Audio. All rights reserved.</string>
+
+    <!-- Hide dock icon if running headless (optional) -->
+    <key>LSUIElement</key>
+    <false/>
+</dict>
+</plist>

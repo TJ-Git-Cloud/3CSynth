@@ -1,0 +1,1170 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		031D72CBAAA09F203B85C6A3 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6526C65ADC024910CC197DD /* CoreAudioKit.framework */; };
+		04C1B34ED472A8FC490F980A /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EF161746CA4310719D599 /* KnobView.swift */; };
+		0502FC19598BF74F62BC450D /* LFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4246DFA647ECFA9FCD4331 /* LFO.swift */; };
+		05A0047353C18D5706594186 /* SynthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */; };
+		05B03139081E649A4244DC33 /* OscillatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */; };
+		0672E480DDEE1FBCFF8BD335 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
+		09D2F2035C79ABCC1A5ED266 /* EnvelopeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */; };
+		09EEF531BC0260FF34AA467B /* ModulationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */; };
+		0DCE57997E91C6EF1BC9EF5D /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F29A75CCEB446037975B /* DesignSystem.swift */; };
+		0E0C1F8DA5C7BA20C857B42D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
+		15004FEA4D751475921AA914 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6526C65ADC024910CC197DD /* CoreAudioKit.framework */; };
+		150C04B5B3612AA80DBDE230 /* WavetableBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */; };
+		15A7E1FF03463B4CCE194AEE /* ThreeCSynthMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D5BC68EF315EFBEE23FFC5 /* ThreeCSynthMacApp.swift */; };
+		18EB7C1B5F91BDE8138EEFF5 /* FilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49C82CA4F86629028F2EDD /* FilterSection.swift */; };
+		19F10B8E056AF6E7A6E5F2A5 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
+		19FE922A00759B18286FD550 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F29A75CCEB446037975B /* DesignSystem.swift */; };
+		1A46EC62AB5BCB324A1BAE3C /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CC0DA62115265630DFB982 /* Preset.swift */; };
+		1AEAACCDC6B9A96BBDAD62C4 /* WavetableBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */; };
+		1B6734C3FA682CEFAA69ED2A /* ThreeCSynthAudioUnitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21F21F4B31298192E8B543B1 /* ThreeCSynthAudioUnitViewController.swift */; };
+		1C0A5BCB4178EA5952D3EE12 /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F04D6566F3A05C19CB826 /* PresetsView.swift */; };
+		1C3B0A37495FD0B7D80EC458 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408573E6C32CF7D01FE9716 /* SynthView.swift */; };
+		1D0BCC086D00FA3E26BFFBA8 /* OscillatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */; };
+		208BA23E607989D429909826 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
+		20AE276323820E7500007E38 /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
+		22F91421228BA8AF3FB8F402 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */; };
+		2426913C4B4A26CC41112FF2 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
+		245B769116220C6F0C33D71E /* 3CSynthAUMac.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D6DF052E0BDAB304C5D1C4C8 /* 3CSynthAUMac.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		269314430997CB029BB3034D /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408573E6C32CF7D01FE9716 /* SynthView.swift */; };
+		2AB57166DC5926583BEA9DD0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A280815C7AE010EED7870A9 /* Accelerate.framework */; };
+		342D6429814B2556A67D1357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
+		3508F2585BBF591D04D4EC3A /* ThreeCSynthComponentAU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BEFB0D5C4267D4CD3F355 /* ThreeCSynthComponentAU.swift */; };
+		35B2B122FF014823976B3656 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
+		367074D1BF578DC9F997DE4A /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408573E6C32CF7D01FE9716 /* SynthView.swift */; };
+		379F27CD9D8F2BB3DC7C83DD /* EnvelopeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */; };
+		37BA042D92813811908356C7 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
+		39AB04CDBBFC139EA92453DE /* MIDIProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB452FAC51B9D34F56690F /* MIDIProcessor.swift */; };
+		3B4FC5D46D02A6CD06474F2C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
+		3B9ED6689CC4545F938F4EEB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1730BC42505B75A43EB47CF /* KeyboardView.swift */; };
+		3C96DB12712C2480D903E6C3 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
+		427F28715A90D1480859C7C3 /* Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B69337D2F2CCEFF8586959 /* Envelope.swift */; };
+		454BD4D06CEE8699154906CE /* ThreeCSynthMacAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8C4494DC3C55FC80F8BB0 /* ThreeCSynthMacAudioUnit.swift */; };
+		48672461D080F7BF78C9841B /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
+		48B953D120B9F7668C8D6BF3 /* SynthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */; };
+		4A6DE279A43F7D01BF3EC3E3 /* OscillatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */; };
+		4BDA6896F38F4F0DD4C54107 /* SynthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */; };
+		4C540C18167D6551125D46D1 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFAF4437B437B3100FD366C /* CoreMIDI.framework */; };
+		505B214E9FF8D32116F83226 /* ModulationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */; };
+		5341A4CC0239496C98957CB8 /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
+		538C673B3A698C07F8826A05 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EF161746CA4310719D599 /* KnobView.swift */; };
+		5422D9B8A344F2F117BB5360 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F29A75CCEB446037975B /* DesignSystem.swift */; };
+		5653E1C4E2E8FBF265DDBC33 /* LFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4246DFA647ECFA9FCD4331 /* LFO.swift */; };
+		569148D3F0192CFAA7865FE8 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F29A75CCEB446037975B /* DesignSystem.swift */; };
+		57CFE983B0D3E648D35CC952 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */; };
+		57F7FDEF3209935776090AAE /* ThreeCSynthAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059347A237F2B00DDCEE08AD /* ThreeCSynthAudioUnit.swift */; };
+		60DD24FABB351C3469BF5B0C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */; };
+		640C3C7DF970A572CF4B2E93 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
+		674A4C7C9F3669165F86F127 /* FilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49C82CA4F86629028F2EDD /* FilterSection.swift */; };
+		677DD6AC1453A4E5B80F8EF4 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
+		6816CA808DE59ABB153F7B9F /* PresetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C302C7D8872577960FA8D5 /* PresetManager.swift */; };
+		6B4F5EB665464F648458C9DB /* EnvelopeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */; };
+		6E5F8981D55AA0533C6E11B1 /* WavetableBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */; };
+		6E7E3CE732F1DB9D51A1081A /* LFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4246DFA647ECFA9FCD4331 /* LFO.swift */; };
+		6F0F312351E8948628469465 /* PresetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C302C7D8872577960FA8D5 /* PresetManager.swift */; };
+		702DC11F4550B336575766D9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
+		70C742841395F66E65C0F931 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6526C65ADC024910CC197DD /* CoreAudioKit.framework */; };
+		718D200C885433412FBD5D39 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A280815C7AE010EED7870A9 /* Accelerate.framework */; };
+		71987E281C6D0543D70473F8 /* ThreeCSynthMacAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C724CEF7352968488A6472 /* ThreeCSynthMacAUViewController.swift */; };
+		71C2FBCA776F37E79F4EC945 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CC0DA62115265630DFB982 /* Preset.swift */; };
+		7798B75C98B3CC12E9CE3AEA /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
+		7DCD71BCE1691C0ED6CBB5BA /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
+		7E00B63C9C34936A52E3D774 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
+		846E7403518F8DB3BEA23E0D /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
+		8626330D25E2FA5124828601 /* LFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4246DFA647ECFA9FCD4331 /* LFO.swift */; };
+		88F3AF6ABB1E8D7BDE175C4E /* WavetableBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */; };
+		898F26E2ED5FDCA02627263E /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6526C65ADC024910CC197DD /* CoreAudioKit.framework */; };
+		8A32F94BD8BF4431B94170F7 /* HybridOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F2A57456187FA5057E875 /* HybridOscillator.swift */; };
+		8E76CCDF011003E6E39D9AAE /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A280815C7AE010EED7870A9 /* Accelerate.framework */; };
+		8F4EA359102BCD15B6EF274B /* ModulationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */; };
+		9168B0D4AD7335E78CF07DBF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */; };
+		957A03DA29377BA14D9148B1 /* EnvelopeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */; };
+		96B7E9E8EDF2FB340B9509D2 /* PresetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C302C7D8872577960FA8D5 /* PresetManager.swift */; };
+		97C7BB621457771C3A11B9F2 /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
+		98936267B5B6BC0CE2F5AC59 /* ModulationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */; };
+		9909F084680833B3F6913DCA /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F29A75CCEB446037975B /* DesignSystem.swift */; };
+		9B25096148C2EDCB2F22839F /* SynthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */; };
+		9CB3A7DF75608FA10BC52636 /* PresetsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560F04D6566F3A05C19CB826 /* PresetsView.swift */; };
+		9D938EEE76C06EC7A9958BD9 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CC0DA62115265630DFB982 /* Preset.swift */; };
+		A5CFC8FA0CCBA27605CAEBFA /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFAF4437B437B3100FD366C /* CoreMIDI.framework */; };
+		A66B7D179F5782A81B194A3D /* HybridOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F2A57456187FA5057E875 /* HybridOscillator.swift */; };
+		AB68832E784ABB1F98F02100 /* CoreAudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6526C65ADC024910CC197DD /* CoreAudioKit.framework */; };
+		ABA3A1CA2AD3A6D903A37A62 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CC0DA62115265630DFB982 /* Preset.swift */; };
+		ABB9E79AA1271CDE40040466 /* ThreeCSynthApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61972765BFEF75165F04504B /* ThreeCSynthApp.swift */; };
+		ABC4E806DB68A28429DC66B5 /* OscillatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */; };
+		ABE2E66E318F7D24EC866F7E /* PresetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C302C7D8872577960FA8D5 /* PresetManager.swift */; };
+		ADB5BE3588928728EC8B4DC6 /* HybridOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F2A57456187FA5057E875 /* HybridOscillator.swift */; };
+		AEBD1A92AA35320C309D3D31 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EF161746CA4310719D599 /* KnobView.swift */; };
+		AF970A32E479ABC29B996A3A /* EnvelopeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */; };
+		B16D899DBB393708642F51A8 /* Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B69337D2F2CCEFF8586959 /* Envelope.swift */; };
+		B92ED13167C0F3E21FE744ED /* MacContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AB7CE2E046DEA7EA004D6B /* MacContentView.swift */; };
+		BF36A142906D042972E82608 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EF161746CA4310719D599 /* KnobView.swift */; };
+		C0DA2BC26BAECFB38EA8F0E3 /* Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B69337D2F2CCEFF8586959 /* Envelope.swift */; };
+		C13D3981747854F51A627D8D /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EF161746CA4310719D599 /* KnobView.swift */; };
+		C5BD0179ACFA5476F0CE0B7D /* LFO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4246DFA647ECFA9FCD4331 /* LFO.swift */; };
+		CA585E04250FD6D59548A986 /* Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B69337D2F2CCEFF8586959 /* Envelope.swift */; };
+		D18A372BED7F79574A09D640 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
+		D29EC1828E2528A947F66CE9 /* PresetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C302C7D8872577960FA8D5 /* PresetManager.swift */; };
+		D2B5984EA8F7B38ED7003BB0 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408573E6C32CF7D01FE9716 /* SynthView.swift */; };
+		D2ECF3238D4F49934E9B3A3A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A280815C7AE010EED7870A9 /* Accelerate.framework */; };
+		D338EF1B590BF8BB2E69774C /* FilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49C82CA4F86629028F2EDD /* FilterSection.swift */; };
+		D3A3C60831146F30FEB35F5B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A280815C7AE010EED7870A9 /* Accelerate.framework */; };
+		D586FF9B906C1AE6CC651068 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408573E6C32CF7D01FE9716 /* SynthView.swift */; };
+		D73B9D4588FE3B35025E2DB9 /* HybridOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F2A57456187FA5057E875 /* HybridOscillator.swift */; };
+		D81C5A9F9AF270EB13FED2B5 /* WavetableBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */; };
+		D9D00A5C39FB5FB488E5B44D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9747C8B993954C97B66E962C /* ContentView.swift */; };
+		DA7B2DD8B8AD37F81D0F4A6C /* Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B69337D2F2CCEFF8586959 /* Envelope.swift */; };
+		DB8DA7BDFD1CF268D148766A /* MIDIProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB452FAC51B9D34F56690F /* MIDIProcessor.swift */; };
+		DF662399DC3543B568F3CF06 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
+		DFC2C30DE1EBA31F4210A4FB /* FilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49C82CA4F86629028F2EDD /* FilterSection.swift */; };
+		E40771178F576BD8B2449163 /* OscillatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */; };
+		E483C962EF0A0040DAF2C943 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */; };
+		EA974BD4DAEF643C1788591B /* HybridOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5F2A57456187FA5057E875 /* HybridOscillator.swift */; };
+		EFEA5076870BB0FB0283739E /* SynthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */; };
+		F176ED3A5340E3D0AC6D8965 /* FilterSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE49C82CA4F86629028F2EDD /* FilterSection.swift */; };
+		F1800F2932660A6100A6B1F3 /* 3CSynthAU.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6063E61B8628A53B87E64C3D /* 3CSynthAU.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F471DFBDA95C43A04CFDD995 /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
+		FB0BC25415B11682C02B4B51 /* ModulationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */; };
+		FC89AE09648529E75948D586 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CC0DA62115265630DFB982 /* Preset.swift */; };
+		FD1CF3968033A6D926B748D4 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		090862722F1222CDD831F72C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE45D02A0DE61E4F0D3D1FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1068B3F54F3067A9D199C695;
+			remoteInfo = 3CSynthAU;
+		};
+		3A69CF46509B5177CBC78A2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE45D02A0DE61E4F0D3D1FEB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0A4BAFBDC6D64BDC75EF838D;
+			remoteInfo = 3CSynthAUMac;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		44764DE553AA661469B911FB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F1800F2932660A6100A6B1F3 /* 3CSynthAU.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		476860EF7FCB8E915BD7EFCD /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				245B769116220C6F0C33D71E /* 3CSynthAUMac.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		059347A237F2B00DDCEE08AD /* ThreeCSynthAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthAudioUnit.swift; sourceTree = "<group>"; };
+		0A5F2A57456187FA5057E875 /* HybridOscillator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridOscillator.swift; sourceTree = "<group>"; };
+		0C9F8E880D9C9D14736DD546 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectsSection.swift; sourceTree = "<group>"; };
+		17AB7CE2E046DEA7EA004D6B /* MacContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacContentView.swift; sourceTree = "<group>"; };
+		1ADCAB2B50C616B541CA5799 /* 3CSynthComponent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3CSynthComponent.entitlements; sourceTree = "<group>"; };
+		21F21F4B31298192E8B543B1 /* ThreeCSynthAudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthAudioUnitViewController.swift; sourceTree = "<group>"; };
+		28FB452FAC51B9D34F56690F /* MIDIProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIProcessor.swift; sourceTree = "<group>"; };
+		39017D65EB827F8A12978F39 /* 3CSynthMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3CSynthMac.entitlements; sourceTree = "<group>"; };
+		3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulationSection.swift; sourceTree = "<group>"; };
+		3A2ADA0656B9D5ADBF52136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		46EC22F012EB303131CA89F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		49C302C7D8872577960FA8D5 /* PresetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetManager.swift; sourceTree = "<group>"; };
+		4A280815C7AE010EED7870A9 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		5530586904D587EF8EDF83BE /* 3CSynthAUMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3CSynthAUMac.entitlements; sourceTree = "<group>"; };
+		560F04D6566F3A05C19CB826 /* PresetsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetsView.swift; sourceTree = "<group>"; };
+		58D5BC68EF315EFBEE23FFC5 /* ThreeCSynthMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthMacApp.swift; sourceTree = "<group>"; };
+		6063E61B8628A53B87E64C3D /* 3CSynthAU.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = 3CSynthAU.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		61972765BFEF75165F04504B /* ThreeCSynthApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthApp.swift; sourceTree = "<group>"; };
+		6437EC73279F6EC90207C243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6E4246DFA647ECFA9FCD4331 /* LFO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LFO.swift; sourceTree = "<group>"; };
+		71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthParameters.swift; sourceTree = "<group>"; };
+		7408573E6C32CF7D01FE9716 /* SynthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
+		7D5EF161746CA4310719D599 /* KnobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KnobView.swift; sourceTree = "<group>"; };
+		7D7865008763DD45007D5093 /* 3CSynthIOS.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = 3CSynthIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83B69337D2F2CCEFF8586959 /* Envelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Envelope.swift; sourceTree = "<group>"; };
+		9747C8B993954C97B66E962C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9BBDF4FF4333871B21F6646F /* Voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
+		9F9DDCE3D78FDBE2F953F574 /* 3CSynth.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3CSynth.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0C724CEF7352968488A6472 /* ThreeCSynthMacAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthMacAUViewController.swift; sourceTree = "<group>"; };
+		AE49C82CA4F86629028F2EDD /* FilterSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSection.swift; sourceTree = "<group>"; };
+		B1730BC42505B75A43EB47CF /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		B6526C65ADC024910CC197DD /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
+		B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthEngine.swift; sourceTree = "<group>"; };
+		BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavetableBank.swift; sourceTree = "<group>"; };
+		BDFAF4437B437B3100FD366C /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
+		C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C5CC0DA62115265630DFB982 /* Preset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preset.swift; sourceTree = "<group>"; };
+		D53A5FCD25729B2984F832F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D6DF052E0BDAB304C5D1C4C8 /* 3CSynthAUMac.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = 3CSynthAUMac.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80D82C30B794319E9C0F18E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D9254F689E400417C2822922 /* 3CSynthMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3CSynthMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC2E0F52415837F4F3D7BC8 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		E29BEFB0D5C4267D4CD3F355 /* ThreeCSynthComponentAU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthComponentAU.swift; sourceTree = "<group>"; };
+		E8C6F29A75CCEB446037975B /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvelopeSection.swift; sourceTree = "<group>"; };
+		F1E8C4494DC3C55FC80F8BB0 /* ThreeCSynthMacAudioUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthMacAudioUnit.swift; sourceTree = "<group>"; };
+		F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscillatorSection.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		01E453067F8AD5DBE670713B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				208BA23E607989D429909826 /* AVFoundation.framework in Frameworks */,
+				60DD24FABB351C3469BF5B0C /* AudioToolbox.framework in Frameworks */,
+				15004FEA4D751475921AA914 /* CoreAudioKit.framework in Frameworks */,
+				D3A3C60831146F30FEB35F5B /* Accelerate.framework in Frameworks */,
+				A5CFC8FA0CCBA27605CAEBFA /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		101F63F794FA3D3DB6B00535 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				702DC11F4550B336575766D9 /* AVFoundation.framework in Frameworks */,
+				9168B0D4AD7335E78CF07DBF /* AudioToolbox.framework in Frameworks */,
+				031D72CBAAA09F203B85C6A3 /* CoreAudioKit.framework in Frameworks */,
+				D2ECF3238D4F49934E9B3A3A /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		862F3F788302705FA877FFFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				342D6429814B2556A67D1357 /* AVFoundation.framework in Frameworks */,
+				22F91421228BA8AF3FB8F402 /* AudioToolbox.framework in Frameworks */,
+				70C742841395F66E65C0F931 /* CoreAudioKit.framework in Frameworks */,
+				718D200C885433412FBD5D39 /* Accelerate.framework in Frameworks */,
+				4C540C18167D6551125D46D1 /* CoreMIDI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B10A8E69DFE8726FC0BA3317 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				640C3C7DF970A572CF4B2E93 /* AVFoundation.framework in Frameworks */,
+				57CFE983B0D3E648D35CC952 /* AudioToolbox.framework in Frameworks */,
+				AB68832E784ABB1F98F02100 /* CoreAudioKit.framework in Frameworks */,
+				8E76CCDF011003E6E39D9AAE /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5E3538359A9EC07D45808DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E00B63C9C34936A52E3D774 /* AVFoundation.framework in Frameworks */,
+				E483C962EF0A0040DAF2C943 /* AudioToolbox.framework in Frameworks */,
+				898F26E2ED5FDCA02627263E /* CoreAudioKit.framework in Frameworks */,
+				2AB57166DC5926583BEA9DD0 /* Accelerate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08139EBC4CF2307FB2BEAB61 /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+				71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */,
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		13583234715E213895AF1287 /* 3CSynthAU */ = {
+			isa = PBXGroup;
+			children = (
+				3A2ADA0656B9D5ADBF52136D /* Info.plist */,
+				059347A237F2B00DDCEE08AD /* ThreeCSynthAudioUnit.swift */,
+				21F21F4B31298192E8B543B1 /* ThreeCSynthAudioUnitViewController.swift */,
+			);
+			path = 3CSynthAU;
+			sourceTree = "<group>";
+		};
+		194C66A20FC24A1DF2BACA17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A280815C7AE010EED7870A9 /* Accelerate.framework */,
+				C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */,
+				D80D82C30B794319E9C0F18E /* AVFoundation.framework */,
+				B6526C65ADC024910CC197DD /* CoreAudioKit.framework */,
+				BDFAF4437B437B3100FD366C /* CoreMIDI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C24C6593A202601DD759822 /* 3CSynthMac */ = {
+			isa = PBXGroup;
+			children = (
+				39017D65EB827F8A12978F39 /* 3CSynthMac.entitlements */,
+				6437EC73279F6EC90207C243 /* Info.plist */,
+				58D5BC68EF315EFBEE23FFC5 /* ThreeCSynthMacApp.swift */,
+				7D44A1C93DFABCE3D9DBDA1E /* Views */,
+			);
+			path = 3CSynthMac;
+			sourceTree = "<group>";
+		};
+		2B0E8099542B743DF3B14870 = {
+			isa = PBXGroup;
+			children = (
+				13583234715E213895AF1287 /* 3CSynthAU */,
+				A1E29EB7ADC13ABBC050F5BA /* 3CSynthAUMac */,
+				5302C6EECDBC2AE61BE018AC /* 3CSynthComponent */,
+				9A3B53DA242CA49A621ED980 /* 3CSynthIOS */,
+				1C24C6593A202601DD759822 /* 3CSynthMac */,
+				3816DD579C9222DCE4C0B7FB /* Shared */,
+				194C66A20FC24A1DF2BACA17 /* Frameworks */,
+				B3427733983B89984DB5B5D7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DDFA1979D8BCCEE9AE82B25 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8C6F29A75CCEB446037975B /* DesignSystem.swift */,
+				0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */,
+				E9BAD655AB5AAEB1454F3F54 /* EnvelopeSection.swift */,
+				AE49C82CA4F86629028F2EDD /* FilterSection.swift */,
+				7D5EF161746CA4310719D599 /* KnobView.swift */,
+				3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */,
+				F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */,
+				560F04D6566F3A05C19CB826 /* PresetsView.swift */,
+				7408573E6C32CF7D01FE9716 /* SynthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3816DD579C9222DCE4C0B7FB /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				D240EF3DC2D276078D79337A /* DSP */,
+				DAFCBF200E15615A0939149C /* MIDI */,
+				08139EBC4CF2307FB2BEAB61 /* Parameters */,
+				FC2122B73D208F1282DAC9BB /* Presets */,
+				2DDFA1979D8BCCEE9AE82B25 /* Views */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3DACE160FEE72946A3705F90 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9747C8B993954C97B66E962C /* ContentView.swift */,
+				B1730BC42505B75A43EB47CF /* KeyboardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5302C6EECDBC2AE61BE018AC /* 3CSynthComponent */ = {
+			isa = PBXGroup;
+			children = (
+				1ADCAB2B50C616B541CA5799 /* 3CSynthComponent.entitlements */,
+				46EC22F012EB303131CA89F9 /* Info.plist */,
+				E29BEFB0D5C4267D4CD3F355 /* ThreeCSynthComponentAU.swift */,
+			);
+			path = 3CSynthComponent;
+			sourceTree = "<group>";
+		};
+		7D44A1C93DFABCE3D9DBDA1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17AB7CE2E046DEA7EA004D6B /* MacContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9A3B53DA242CA49A621ED980 /* 3CSynthIOS */ = {
+			isa = PBXGroup;
+			children = (
+				D53A5FCD25729B2984F832F0 /* Info.plist */,
+				61972765BFEF75165F04504B /* ThreeCSynthApp.swift */,
+				3DACE160FEE72946A3705F90 /* Views */,
+			);
+			path = 3CSynthIOS;
+			sourceTree = "<group>";
+		};
+		A1E29EB7ADC13ABBC050F5BA /* 3CSynthAUMac */ = {
+			isa = PBXGroup;
+			children = (
+				5530586904D587EF8EDF83BE /* 3CSynthAUMac.entitlements */,
+				0C9F8E880D9C9D14736DD546 /* Info.plist */,
+				F1E8C4494DC3C55FC80F8BB0 /* ThreeCSynthMacAudioUnit.swift */,
+				A0C724CEF7352968488A6472 /* ThreeCSynthMacAUViewController.swift */,
+			);
+			path = 3CSynthAUMac;
+			sourceTree = "<group>";
+		};
+		B3427733983B89984DB5B5D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6063E61B8628A53B87E64C3D /* 3CSynthAU.appex */,
+				D6DF052E0BDAB304C5D1C4C8 /* 3CSynthAUMac.appex */,
+				9F9DDCE3D78FDBE2F953F574 /* 3CSynth.component */,
+				7D7865008763DD45007D5093 /* 3CSynthIOS.app */,
+				D9254F689E400417C2822922 /* 3CSynthMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D240EF3DC2D276078D79337A /* DSP */ = {
+			isa = PBXGroup;
+			children = (
+				83B69337D2F2CCEFF8586959 /* Envelope.swift */,
+				DCC2E0F52415837F4F3D7BC8 /* Filter.swift */,
+				0A5F2A57456187FA5057E875 /* HybridOscillator.swift */,
+				6E4246DFA647ECFA9FCD4331 /* LFO.swift */,
+				B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */,
+				9BBDF4FF4333871B21F6646F /* Voice.swift */,
+				BAA38EE84A72B8EB3A554DD8 /* WavetableBank.swift */,
+			);
+			path = DSP;
+			sourceTree = "<group>";
+		};
+		DAFCBF200E15615A0939149C /* MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				28FB452FAC51B9D34F56690F /* MIDIProcessor.swift */,
+			);
+			path = MIDI;
+			sourceTree = "<group>";
+		};
+		FC2122B73D208F1282DAC9BB /* Presets */ = {
+			isa = PBXGroup;
+			children = (
+				C5CC0DA62115265630DFB982 /* Preset.swift */,
+				49C302C7D8872577960FA8D5 /* PresetManager.swift */,
+			);
+			path = Presets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A4BAFBDC6D64BDC75EF838D /* 3CSynthAUMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28FB9593DB3D1965625D1E68 /* Build configuration list for PBXNativeTarget "3CSynthAUMac" */;
+			buildPhases = (
+				726317649A8FDC169635051E /* Sources */,
+				D5E3538359A9EC07D45808DD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3CSynthAUMac;
+			packageProductDependencies = (
+			);
+			productName = 3CSynthAUMac;
+			productReference = D6DF052E0BDAB304C5D1C4C8 /* 3CSynthAUMac.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1068B3F54F3067A9D199C695 /* 3CSynthAU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE91D92C390C9CEC517EC6FC /* Build configuration list for PBXNativeTarget "3CSynthAU" */;
+			buildPhases = (
+				620110A7282745C6B763C375 /* Sources */,
+				101F63F794FA3D3DB6B00535 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3CSynthAU;
+			packageProductDependencies = (
+			);
+			productName = 3CSynthAU;
+			productReference = 6063E61B8628A53B87E64C3D /* 3CSynthAU.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		1F9722B9C70E14A12D4F1AF1 /* 3CSynthComponent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21FCC7FF2B395BDC9181E924 /* Build configuration list for PBXNativeTarget "3CSynthComponent" */;
+			buildPhases = (
+				37253944923B1BC3A93F635B /* Sources */,
+				B10A8E69DFE8726FC0BA3317 /* Frameworks */,
+				6E0A50F0BDB22DE7137DF46E /* Install Component */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 3CSynthComponent;
+			packageProductDependencies = (
+			);
+			productName = 3CSynthComponent;
+			productReference = 9F9DDCE3D78FDBE2F953F574 /* 3CSynth.component */;
+			productType = "com.apple.product-type.bundle";
+		};
+		AB775A7E2B1568455B25155E /* 3CSynthIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B29908C7C7F0C4F6ABC89BC /* Build configuration list for PBXNativeTarget "3CSynthIOS" */;
+			buildPhases = (
+				6227F637AC17504621298332 /* Sources */,
+				862F3F788302705FA877FFFF /* Frameworks */,
+				44764DE553AA661469B911FB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B275A5856609A5C0BD5DA1FB /* PBXTargetDependency */,
+			);
+			name = 3CSynthIOS;
+			packageProductDependencies = (
+			);
+			productName = 3CSynthIOS;
+			productReference = 7D7865008763DD45007D5093 /* 3CSynthIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F567C8A88216A2CAEE48557B /* 3CSynthMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C52581AC569E5456A9FC29CD /* Build configuration list for PBXNativeTarget "3CSynthMac" */;
+			buildPhases = (
+				862CE6E7E6A3D71D2556D915 /* Sources */,
+				01E453067F8AD5DBE670713B /* Frameworks */,
+				476860EF7FCB8E915BD7EFCD /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F547D6F47C8647D8B340D677 /* PBXTargetDependency */,
+			);
+			name = 3CSynthMac;
+			packageProductDependencies = (
+			);
+			productName = 3CSynthMac;
+			productReference = D9254F689E400417C2822922 /* 3CSynthMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE45D02A0DE61E4F0D3D1FEB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0A4BAFBDC6D64BDC75EF838D = {
+						ProvisioningStyle = Automatic;
+					};
+					1068B3F54F3067A9D199C695 = {
+						DevelopmentTeam = YOURTEAMID;
+						ProvisioningStyle = Automatic;
+					};
+					1F9722B9C70E14A12D4F1AF1 = {
+						ProvisioningStyle = Automatic;
+					};
+					AB775A7E2B1568455B25155E = {
+						DevelopmentTeam = YOURTEAMID;
+						ProvisioningStyle = Automatic;
+					};
+					F567C8A88216A2CAEE48557B = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 4573B5D201215FED1427143E /* Build configuration list for PBXProject "3CSynth" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2B0E8099542B743DF3B14870;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = B3427733983B89984DB5B5D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1068B3F54F3067A9D199C695 /* 3CSynthAU */,
+				0A4BAFBDC6D64BDC75EF838D /* 3CSynthAUMac */,
+				1F9722B9C70E14A12D4F1AF1 /* 3CSynthComponent */,
+				AB775A7E2B1568455B25155E /* 3CSynthIOS */,
+				F567C8A88216A2CAEE48557B /* 3CSynthMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E0A50F0BDB22DE7137DF46E /* Install Component */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Install Component";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "DEST=\"/Users/cloud/Library/Audio/Plug-Ins/Components\"\nmkdir -p \"${DEST}\"\ncp -Rf \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\" \"${DEST}/\"\necho \"✅ Installed ${WRAPPER_NAME} to ${DEST}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		37253944923B1BC3A93F635B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5422D9B8A344F2F117BB5360 /* DesignSystem.swift in Sources */,
+				5341A4CC0239496C98957CB8 /* EffectsSection.swift in Sources */,
+				427F28715A90D1480859C7C3 /* Envelope.swift in Sources */,
+				6B4F5EB665464F648458C9DB /* EnvelopeSection.swift in Sources */,
+				19F10B8E056AF6E7A6E5F2A5 /* Filter.swift in Sources */,
+				D338EF1B590BF8BB2E69774C /* FilterSection.swift in Sources */,
+				ADB5BE3588928728EC8B4DC6 /* HybridOscillator.swift in Sources */,
+				04C1B34ED472A8FC490F980A /* KnobView.swift in Sources */,
+				C5BD0179ACFA5476F0CE0B7D /* LFO.swift in Sources */,
+				8F4EA359102BCD15B6EF274B /* ModulationSection.swift in Sources */,
+				1D0BCC086D00FA3E26BFFBA8 /* OscillatorSection.swift in Sources */,
+				ABA3A1CA2AD3A6D903A37A62 /* Preset.swift in Sources */,
+				ABE2E66E318F7D24EC866F7E /* PresetManager.swift in Sources */,
+				D18A372BED7F79574A09D640 /* SynthEngine.swift in Sources */,
+				05A0047353C18D5706594186 /* SynthParameters.swift in Sources */,
+				D2B5984EA8F7B38ED7003BB0 /* SynthView.swift in Sources */,
+				3508F2585BBF591D04D4EC3A /* ThreeCSynthComponentAU.swift in Sources */,
+				2426913C4B4A26CC41112FF2 /* Voice.swift in Sources */,
+				150C04B5B3612AA80DBDE230 /* WavetableBank.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		620110A7282745C6B763C375 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9909F084680833B3F6913DCA /* DesignSystem.swift in Sources */,
+				F471DFBDA95C43A04CFDD995 /* EffectsSection.swift in Sources */,
+				C0DA2BC26BAECFB38EA8F0E3 /* Envelope.swift in Sources */,
+				957A03DA29377BA14D9148B1 /* EnvelopeSection.swift in Sources */,
+				677DD6AC1453A4E5B80F8EF4 /* Filter.swift in Sources */,
+				674A4C7C9F3669165F86F127 /* FilterSection.swift in Sources */,
+				D73B9D4588FE3B35025E2DB9 /* HybridOscillator.swift in Sources */,
+				BF36A142906D042972E82608 /* KnobView.swift in Sources */,
+				5653E1C4E2E8FBF265DDBC33 /* LFO.swift in Sources */,
+				39AB04CDBBFC139EA92453DE /* MIDIProcessor.swift in Sources */,
+				FB0BC25415B11682C02B4B51 /* ModulationSection.swift in Sources */,
+				ABC4E806DB68A28429DC66B5 /* OscillatorSection.swift in Sources */,
+				1A46EC62AB5BCB324A1BAE3C /* Preset.swift in Sources */,
+				6816CA808DE59ABB153F7B9F /* PresetManager.swift in Sources */,
+				3C96DB12712C2480D903E6C3 /* SynthEngine.swift in Sources */,
+				9B25096148C2EDCB2F22839F /* SynthParameters.swift in Sources */,
+				D586FF9B906C1AE6CC651068 /* SynthView.swift in Sources */,
+				57F7FDEF3209935776090AAE /* ThreeCSynthAudioUnit.swift in Sources */,
+				1B6734C3FA682CEFAA69ED2A /* ThreeCSynthAudioUnitViewController.swift in Sources */,
+				7798B75C98B3CC12E9CE3AEA /* Voice.swift in Sources */,
+				6E5F8981D55AA0533C6E11B1 /* WavetableBank.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6227F637AC17504621298332 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9D00A5C39FB5FB488E5B44D /* ContentView.swift in Sources */,
+				0DCE57997E91C6EF1BC9EF5D /* DesignSystem.swift in Sources */,
+				97C7BB621457771C3A11B9F2 /* EffectsSection.swift in Sources */,
+				DA7B2DD8B8AD37F81D0F4A6C /* Envelope.swift in Sources */,
+				AF970A32E479ABC29B996A3A /* EnvelopeSection.swift in Sources */,
+				0E0C1F8DA5C7BA20C857B42D /* Filter.swift in Sources */,
+				F176ED3A5340E3D0AC6D8965 /* FilterSection.swift in Sources */,
+				8A32F94BD8BF4431B94170F7 /* HybridOscillator.swift in Sources */,
+				3B9ED6689CC4545F938F4EEB /* KeyboardView.swift in Sources */,
+				538C673B3A698C07F8826A05 /* KnobView.swift in Sources */,
+				8626330D25E2FA5124828601 /* LFO.swift in Sources */,
+				DB8DA7BDFD1CF268D148766A /* MIDIProcessor.swift in Sources */,
+				09EEF531BC0260FF34AA467B /* ModulationSection.swift in Sources */,
+				05B03139081E649A4244DC33 /* OscillatorSection.swift in Sources */,
+				71C2FBCA776F37E79F4EC945 /* Preset.swift in Sources */,
+				96B7E9E8EDF2FB340B9509D2 /* PresetManager.swift in Sources */,
+				9CB3A7DF75608FA10BC52636 /* PresetsView.swift in Sources */,
+				35B2B122FF014823976B3656 /* SynthEngine.swift in Sources */,
+				4BDA6896F38F4F0DD4C54107 /* SynthParameters.swift in Sources */,
+				1C3B0A37495FD0B7D80EC458 /* SynthView.swift in Sources */,
+				ABB9E79AA1271CDE40040466 /* ThreeCSynthApp.swift in Sources */,
+				846E7403518F8DB3BEA23E0D /* Voice.swift in Sources */,
+				1AEAACCDC6B9A96BBDAD62C4 /* WavetableBank.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		726317649A8FDC169635051E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				569148D3F0192CFAA7865FE8 /* DesignSystem.swift in Sources */,
+				20AE276323820E7500007E38 /* EffectsSection.swift in Sources */,
+				B16D899DBB393708642F51A8 /* Envelope.swift in Sources */,
+				379F27CD9D8F2BB3DC7C83DD /* EnvelopeSection.swift in Sources */,
+				3B4FC5D46D02A6CD06474F2C /* Filter.swift in Sources */,
+				18EB7C1B5F91BDE8138EEFF5 /* FilterSection.swift in Sources */,
+				A66B7D179F5782A81B194A3D /* HybridOscillator.swift in Sources */,
+				AEBD1A92AA35320C309D3D31 /* KnobView.swift in Sources */,
+				6E7E3CE732F1DB9D51A1081A /* LFO.swift in Sources */,
+				98936267B5B6BC0CE2F5AC59 /* ModulationSection.swift in Sources */,
+				4A6DE279A43F7D01BF3EC3E3 /* OscillatorSection.swift in Sources */,
+				FC89AE09648529E75948D586 /* Preset.swift in Sources */,
+				6F0F312351E8948628469465 /* PresetManager.swift in Sources */,
+				37BA042D92813811908356C7 /* SynthEngine.swift in Sources */,
+				48B953D120B9F7668C8D6BF3 /* SynthParameters.swift in Sources */,
+				367074D1BF578DC9F997DE4A /* SynthView.swift in Sources */,
+				71987E281C6D0543D70473F8 /* ThreeCSynthMacAUViewController.swift in Sources */,
+				454BD4D06CEE8699154906CE /* ThreeCSynthMacAudioUnit.swift in Sources */,
+				DF662399DC3543B568F3CF06 /* Voice.swift in Sources */,
+				88F3AF6ABB1E8D7BDE175C4E /* WavetableBank.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		862CE6E7E6A3D71D2556D915 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19FE922A00759B18286FD550 /* DesignSystem.swift in Sources */,
+				48672461D080F7BF78C9841B /* EffectsSection.swift in Sources */,
+				CA585E04250FD6D59548A986 /* Envelope.swift in Sources */,
+				09D2F2035C79ABCC1A5ED266 /* EnvelopeSection.swift in Sources */,
+				7DCD71BCE1691C0ED6CBB5BA /* Filter.swift in Sources */,
+				DFC2C30DE1EBA31F4210A4FB /* FilterSection.swift in Sources */,
+				EA974BD4DAEF643C1788591B /* HybridOscillator.swift in Sources */,
+				C13D3981747854F51A627D8D /* KnobView.swift in Sources */,
+				0502FC19598BF74F62BC450D /* LFO.swift in Sources */,
+				B92ED13167C0F3E21FE744ED /* MacContentView.swift in Sources */,
+				505B214E9FF8D32116F83226 /* ModulationSection.swift in Sources */,
+				E40771178F576BD8B2449163 /* OscillatorSection.swift in Sources */,
+				9D938EEE76C06EC7A9958BD9 /* Preset.swift in Sources */,
+				D29EC1828E2528A947F66CE9 /* PresetManager.swift in Sources */,
+				1C0A5BCB4178EA5952D3EE12 /* PresetsView.swift in Sources */,
+				0672E480DDEE1FBCFF8BD335 /* SynthEngine.swift in Sources */,
+				EFEA5076870BB0FB0283739E /* SynthParameters.swift in Sources */,
+				269314430997CB029BB3034D /* SynthView.swift in Sources */,
+				15A7E1FF03463B4CCE194AEE /* ThreeCSynthMacApp.swift in Sources */,
+				FD1CF3968033A6D926B748D4 /* Voice.swift in Sources */,
+				D81C5A9F9AF270EB13FED2B5 /* WavetableBank.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B275A5856609A5C0BD5DA1FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1068B3F54F3067A9D199C695 /* 3CSynthAU */;
+			targetProxy = 090862722F1222CDD831F72C /* PBXContainerItemProxy */;
+		};
+		F547D6F47C8647D8B340D677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0A4BAFBDC6D64BDC75EF838D /* 3CSynthAUMac */;
+			targetProxy = 3A69CF46509B5177CBC78A2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11461E4A654837C1CEA4632C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = 3CSynthAU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.ios.au;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		311D70B848660A02B3158276 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = 3CSynthIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		35BFE0FBDF705D1ED6F0ECCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 3CSynthComponent/3CSynthComponent.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 853Q44S78Y;
+				INFOPLIST_FILE = 3CSynthComponent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.component;
+				PRODUCT_MODULE_NAME = ThreeCSynthComponent;
+				PRODUCT_NAME = 3CSynth;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = component;
+			};
+			name = Debug;
+		};
+		4DEEF49C5B60BD5E30CD9FE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = 3CSynthAU/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.ios.au;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5A220C7512CE5568AFB6A824 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = YOURTEAMID;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		9278915EDC00A3EE98BBC94D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 3CSynthComponent/3CSynthComponent.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 853Q44S78Y;
+				INFOPLIST_FILE = 3CSynthComponent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.component;
+				PRODUCT_MODULE_NAME = ThreeCSynthComponent;
+				PRODUCT_NAME = 3CSynth;
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = component;
+			};
+			name = Release;
+		};
+		97A9F67ACEDFCFF6AFE750AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 3CSynthAUMac/3CSynthAUMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 853Q44S78Y;
+				INFOPLIST_FILE = 3CSynthAUMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.mac.au;
+				PRODUCT_MODULE_NAME = ThreeCSynthAUMac;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		97CDD824747D5CA1BA9018F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 3CSynthMac/3CSynthMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 853Q44S78Y;
+				INFOPLIST_FILE = 3CSynthMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.mac;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		A4D3C8EB7B1CFD797BF71301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = 3CSynthIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.ios;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7D660E4FCA18459ABD37E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = 3CSynthAUMac/3CSynthAUMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 853Q44S78Y;
+				INFOPLIST_FILE = 3CSynthAUMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.mac.au;
+				PRODUCT_MODULE_NAME = ThreeCSynthAUMac;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DE2627FBF3FF279F5AC8EF3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = YOURTEAMID;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		F1156C50C5979CD48C21BCEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = 3CSynthMac/3CSynthMac.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 853Q44S78Y;
+				INFOPLIST_FILE = 3CSynthMac/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.mac;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1B29908C7C7F0C4F6ABC89BC /* Build configuration list for PBXNativeTarget "3CSynthIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4D3C8EB7B1CFD797BF71301 /* Debug */,
+				311D70B848660A02B3158276 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		21FCC7FF2B395BDC9181E924 /* Build configuration list for PBXNativeTarget "3CSynthComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				35BFE0FBDF705D1ED6F0ECCA /* Debug */,
+				9278915EDC00A3EE98BBC94D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		28FB9593DB3D1965625D1E68 /* Build configuration list for PBXNativeTarget "3CSynthAUMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7D660E4FCA18459ABD37E49 /* Debug */,
+				97A9F67ACEDFCFF6AFE750AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4573B5D201215FED1427143E /* Build configuration list for PBXProject "3CSynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE2627FBF3FF279F5AC8EF3D /* Debug */,
+				5A220C7512CE5568AFB6A824 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C52581AC569E5456A9FC29CD /* Build configuration list for PBXNativeTarget "3CSynthMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97CDD824747D5CA1BA9018F9 /* Debug */,
+				F1156C50C5979CD48C21BCEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CE91D92C390C9CEC517EC6FC /* Build configuration list for PBXNativeTarget "3CSynthAU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEEF49C5B60BD5E30CD9FE7 /* Debug */,
+				11461E4A654837C1CEA4632C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE45D02A0DE61E4F0D3D1FEB /* Project object */;
+}

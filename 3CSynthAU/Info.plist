@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+    "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Info.plist — 3CSynthAU Extension
+
+  Replace YOUR_TEAM_ID with your Apple Developer Team ID.
+  Replace com.yourcompany with your reverse-DNS bundle ID prefix.
+
+  The AudioComponents entry registers 3CSynth with CoreAudio so that
+  Logic Pro and other AUv3 hosts can discover and load the plug-in.
+-->
+<plist version="1.0">
+<dict>
+    <key>NSExtension</key>
+    <dict>
+        <key>NSExtensionAttributes</key>
+        <dict>
+            <key>AudioComponents</key>
+            <array>
+                <dict>
+                    <!-- Music Device (instrument) type -->
+                    <key>type</key>
+                    <string>aumu</string>
+
+                    <!-- Your unique 4-character OSType.  Change 'Prsm' if taken. -->
+                    <key>subtype</key>
+                    <string>Prsm</string>
+
+                    <!-- Register your manufacturer code at developer.apple.com -->
+                    <key>manufacturer</key>
+                    <string>Prma</string>
+
+                    <key>name</key>
+                    <string>3CSynth Audio: 3CSynth</string>
+
+                    <key>description</key>
+                    <string>Hybrid subtractive/wavetable synthesizer</string>
+
+                    <key>version</key>
+                    <integer>65536</integer>
+
+                    <!-- Enable the in-process (sandbox) instantiation path.     -->
+                    <!-- Required for AUv3 instruments in Logic Pro on macOS 12+ -->
+                    <key>sandboxSafe</key>
+                    <true/>
+
+                    <key>factoryFunction</key>
+                    <string>ThreeCSynthAudioUnitViewController</string>
+                </dict>
+            </array>
+        </dict>
+
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).ThreeCSynthAudioUnitViewController</string>
+
+        <key>NSExtensionPointIdentifier</key>
+        <string>com.apple.AudioUnit-UI</string>
+    </dict>
+
+    <key>CFBundleDisplayName</key>
+    <string>3CSynth</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+
+    <key>CFBundleVersion</key>
+    <string>1</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>$(MARKETING_VERSION)</string>
+
+    <key>NSHumanReadableCopyright</key>
+    <string>Copyright © 2026 3CSynth Audio. All rights reserved.</string>
+</dict>
+</plist>
