@@ -38,7 +38,7 @@ final class ThreeCSynthAppModel {
     // MARK: Public
 
     let engine = SynthEngine()
-    let parameters = SynthParameters()
+    var parameters: SynthParameters { engine.parameters }
     let presetManager = PresetManager()
 
     private(set) var isAudioRunning = false

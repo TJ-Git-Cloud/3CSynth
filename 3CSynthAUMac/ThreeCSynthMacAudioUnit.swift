@@ -22,9 +22,9 @@ public final class ThreeCSynthMacAudioUnit: AUAudioUnit {
 
     // MARK: Properties
 
-    public let synthParameters = SynthParameters()
-
     private let engine = SynthEngine()
+
+    public var synthParameters: SynthParameters { engine.parameters }
     private var _parameterTree: AUParameterTree!
     private var _outputBus: AUAudioUnitBus!
     private var _outputBusArray: AUAudioUnitBusArray!

@@ -48,7 +48,8 @@ public final class SynthEngine {
     private var sampleRate: Double
     private var pitchBend: Float = 0.0            // –1…+1 (±2 semitones)
     private var modWheel: Float = 0.0             // 0…1
-    private var masterVolume: Float = 0.8
+    private var delay = StereoDelay()
+    private var reverb: SimpleReverb
 
     private let maxFramesPerSlice: Int = 4096
 
@@ -57,7 +58,7 @@ public final class SynthEngine {
     public init() {
         sampleRate = k3CSynthDefaultSampleRate
         parameters = SynthParameters()
-
+        reverb = SimpleReverb(sampleRate: k3CSynthDefaultSampleRate)
         voices = (0 ..< k3CSynthMaxVoices).map { _ in Voice() }
     }
 
@@ -69,6 +70,7 @@ public final class SynthEngine {
         for voice in voices {
             voice.configure(sampleRate: newRate)
         }
+        delay.sampleRate = newRate
     }
 
     // MARK: MIDI
@@ -154,8 +156,17 @@ public final class SynthEngine {
             )
         }
 
+        // Apply effects.
+        delay.delayTime = parameters.delayTime
+        delay.feedback  = parameters.delayFeedback
+        delay.mix       = parameters.delayMix
+        delay.process(left: leftPtr, right: rightPtr, frameCount: frames)
+
+        reverb.mix = parameters.reverbMix
+        reverb.process(left: leftPtr, right: rightPtr, frameCount: frames)
+
         // Apply master volume with vDSP for efficiency.
-        var vol = masterVolume
+        var vol = parameters.masterVolume
         vDSP_vsmul(leftPtr,  1, &vol, leftPtr,  1, vDSP_Length(frames))
         vDSP_vsmul(rightPtr, 1, &vol, rightPtr, 1, vDSP_Length(frames))
     }

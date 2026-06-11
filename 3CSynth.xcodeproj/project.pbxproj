@@ -31,11 +31,13 @@
 		1D0BCC086D00FA3E26BFFBA8 /* OscillatorSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48EBFB09E2EEC930E31FF76 /* OscillatorSection.swift */; };
 		208BA23E607989D429909826 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
 		20AE276323820E7500007E38 /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
+		2278C1BBEA89DF882D20B128 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B3F747B087B090CFAD999 /* Effects.swift */; };
 		22F91421228BA8AF3FB8F402 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06E2312C6CD8C22A63F0108 /* AudioToolbox.framework */; };
 		2426913C4B4A26CC41112FF2 /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
 		245B769116220C6F0C33D71E /* 3CSynthAUMac.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D6DF052E0BDAB304C5D1C4C8 /* 3CSynthAUMac.appex */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		269314430997CB029BB3034D /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7408573E6C32CF7D01FE9716 /* SynthView.swift */; };
 		2AB57166DC5926583BEA9DD0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A280815C7AE010EED7870A9 /* Accelerate.framework */; };
+		30770BD0BF4613112AA04A12 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B3F747B087B090CFAD999 /* Effects.swift */; };
 		342D6429814B2556A67D1357 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
 		3508F2585BBF591D04D4EC3A /* ThreeCSynthComponentAU.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29BEFB0D5C4267D4CD3F355 /* ThreeCSynthComponentAU.swift */; };
 		35B2B122FF014823976B3656 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
@@ -45,6 +47,7 @@
 		39AB04CDBBFC139EA92453DE /* MIDIProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FB452FAC51B9D34F56690F /* MIDIProcessor.swift */; };
 		3B4FC5D46D02A6CD06474F2C /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
 		3B9ED6689CC4545F938F4EEB /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1730BC42505B75A43EB47CF /* KeyboardView.swift */; };
+		3C3A3DC5C571A791D5689987 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B3F747B087B090CFAD999 /* Effects.swift */; };
 		3C96DB12712C2480D903E6C3 /* SynthEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98AB65B846DBE0E4713B7A8 /* SynthEngine.swift */; };
 		427F28715A90D1480859C7C3 /* Envelope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83B69337D2F2CCEFF8586959 /* Envelope.swift */; };
 		454BD4D06CEE8699154906CE /* ThreeCSynthMacAudioUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E8C4494DC3C55FC80F8BB0 /* ThreeCSynthMacAudioUnit.swift */; };
@@ -54,6 +57,7 @@
 		4BDA6896F38F4F0DD4C54107 /* SynthParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71236F1FBB85EA08534CAAE7 /* SynthParameters.swift */; };
 		4C540C18167D6551125D46D1 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFAF4437B437B3100FD366C /* CoreMIDI.framework */; };
 		505B214E9FF8D32116F83226 /* ModulationSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */; };
+		52BB923CA2048B8EC1EC8A93 /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B3F747B087B090CFAD999 /* Effects.swift */; };
 		5341A4CC0239496C98957CB8 /* EffectsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D078C7FCE9279E6FBF6DFB7 /* EffectsSection.swift */; };
 		538C673B3A698C07F8826A05 /* KnobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5EF161746CA4310719D599 /* KnobView.swift */; };
 		5422D9B8A344F2F117BB5360 /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6F29A75CCEB446037975B /* DesignSystem.swift */; };
@@ -76,6 +80,7 @@
 		71987E281C6D0543D70473F8 /* ThreeCSynthMacAUViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C724CEF7352968488A6472 /* ThreeCSynthMacAUViewController.swift */; };
 		71C2FBCA776F37E79F4EC945 /* Preset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CC0DA62115265630DFB982 /* Preset.swift */; };
 		7798B75C98B3CC12E9CE3AEA /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
+		779E345A0031F4B46BB72FFC /* Effects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B3F747B087B090CFAD999 /* Effects.swift */; };
 		7DCD71BCE1691C0ED6CBB5BA /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC2E0F52415837F4F3D7BC8 /* Filter.swift */; };
 		7E00B63C9C34936A52E3D774 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80D82C30B794319E9C0F18E /* AVFoundation.framework */; };
 		846E7403518F8DB3BEA23E0D /* Voice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BBDF4FF4333871B21F6646F /* Voice.swift */; };
@@ -188,6 +193,7 @@
 		1ADCAB2B50C616B541CA5799 /* 3CSynthComponent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3CSynthComponent.entitlements; sourceTree = "<group>"; };
 		21F21F4B31298192E8B543B1 /* ThreeCSynthAudioUnitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthAudioUnitViewController.swift; sourceTree = "<group>"; };
 		28FB452FAC51B9D34F56690F /* MIDIProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIProcessor.swift; sourceTree = "<group>"; };
+		355B3F747B087B090CFAD999 /* Effects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Effects.swift; sourceTree = "<group>"; };
 		39017D65EB827F8A12978F39 /* 3CSynthMac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = 3CSynthMac.entitlements; sourceTree = "<group>"; };
 		3959DBA4DCD97DFFB3BAD0B3 /* ModulationSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulationSection.swift; sourceTree = "<group>"; };
 		3A2ADA0656B9D5ADBF52136D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -208,7 +214,7 @@
 		83B69337D2F2CCEFF8586959 /* Envelope.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Envelope.swift; sourceTree = "<group>"; };
 		9747C8B993954C97B66E962C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9BBDF4FF4333871B21F6646F /* Voice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Voice.swift; sourceTree = "<group>"; };
-		9F9DDCE3D78FDBE2F953F574 /* 3CSynth.component */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3CSynth.component; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F9DDCE3D78FDBE2F953F574 /* 3CSynthComponent.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 3CSynthComponent.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0C724CEF7352968488A6472 /* ThreeCSynthMacAUViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeCSynthMacAUViewController.swift; sourceTree = "<group>"; };
 		AE49C82CA4F86629028F2EDD /* FilterSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSection.swift; sourceTree = "<group>"; };
 		B1730BC42505B75A43EB47CF /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -427,7 +433,7 @@
 			children = (
 				6063E61B8628A53B87E64C3D /* 3CSynthAU.appex */,
 				D6DF052E0BDAB304C5D1C4C8 /* 3CSynthAUMac.appex */,
-				9F9DDCE3D78FDBE2F953F574 /* 3CSynth.component */,
+				9F9DDCE3D78FDBE2F953F574 /* 3CSynthComponent.bundle */,
 				7D7865008763DD45007D5093 /* 3CSynthIOS.app */,
 				D9254F689E400417C2822922 /* 3CSynthMac.app */,
 			);
@@ -437,6 +443,7 @@
 		D240EF3DC2D276078D79337A /* DSP */ = {
 			isa = PBXGroup;
 			children = (
+				355B3F747B087B090CFAD999 /* Effects.swift */,
 				83B69337D2F2CCEFF8586959 /* Envelope.swift */,
 				DCC2E0F52415837F4F3D7BC8 /* Filter.swift */,
 				0A5F2A57456187FA5057E875 /* HybridOscillator.swift */,
@@ -520,7 +527,7 @@
 			packageProductDependencies = (
 			);
 			productName = 3CSynthComponent;
-			productReference = 9F9DDCE3D78FDBE2F953F574 /* 3CSynth.component */;
+			productReference = 9F9DDCE3D78FDBE2F953F574 /* 3CSynthComponent.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		AB775A7E2B1568455B25155E /* 3CSynthIOS */ = {
@@ -573,6 +580,7 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					0A4BAFBDC6D64BDC75EF838D = {
+						DevelopmentTeam = YOURTEAMID;
 						ProvisioningStyle = Automatic;
 					};
 					1068B3F54F3067A9D199C695 = {
@@ -580,6 +588,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					1F9722B9C70E14A12D4F1AF1 = {
+						DevelopmentTeam = YOURTEAMID;
 						ProvisioningStyle = Automatic;
 					};
 					AB775A7E2B1568455B25155E = {
@@ -587,6 +596,7 @@
 						ProvisioningStyle = Automatic;
 					};
 					F567C8A88216A2CAEE48557B = {
+						DevelopmentTeam = YOURTEAMID;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -642,6 +652,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5422D9B8A344F2F117BB5360 /* DesignSystem.swift in Sources */,
+				52BB923CA2048B8EC1EC8A93 /* Effects.swift in Sources */,
 				5341A4CC0239496C98957CB8 /* EffectsSection.swift in Sources */,
 				427F28715A90D1480859C7C3 /* Envelope.swift in Sources */,
 				6B4F5EB665464F648458C9DB /* EnvelopeSection.swift in Sources */,
@@ -668,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9909F084680833B3F6913DCA /* DesignSystem.swift in Sources */,
+				779E345A0031F4B46BB72FFC /* Effects.swift in Sources */,
 				F471DFBDA95C43A04CFDD995 /* EffectsSection.swift in Sources */,
 				C0DA2BC26BAECFB38EA8F0E3 /* Envelope.swift in Sources */,
 				957A03DA29377BA14D9148B1 /* EnvelopeSection.swift in Sources */,
@@ -697,6 +709,7 @@
 			files = (
 				D9D00A5C39FB5FB488E5B44D /* ContentView.swift in Sources */,
 				0DCE57997E91C6EF1BC9EF5D /* DesignSystem.swift in Sources */,
+				3C3A3DC5C571A791D5689987 /* Effects.swift in Sources */,
 				97C7BB621457771C3A11B9F2 /* EffectsSection.swift in Sources */,
 				DA7B2DD8B8AD37F81D0F4A6C /* Envelope.swift in Sources */,
 				AF970A32E479ABC29B996A3A /* EnvelopeSection.swift in Sources */,
@@ -726,6 +739,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				569148D3F0192CFAA7865FE8 /* DesignSystem.swift in Sources */,
+				30770BD0BF4613112AA04A12 /* Effects.swift in Sources */,
 				20AE276323820E7500007E38 /* EffectsSection.swift in Sources */,
 				B16D899DBB393708642F51A8 /* Envelope.swift in Sources */,
 				379F27CD9D8F2BB3DC7C83DD /* EnvelopeSection.swift in Sources */,
@@ -753,6 +767,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19FE922A00759B18286FD550 /* DesignSystem.swift in Sources */,
+				2278C1BBEA89DF882D20B128 /* Effects.swift in Sources */,
 				48672461D080F7BF78C9841B /* EffectsSection.swift in Sources */,
 				CA585E04250FD6D59548A986 /* Envelope.swift in Sources */,
 				09D2F2035C79ABCC1A5ED266 /* EnvelopeSection.swift in Sources */,
@@ -816,10 +831,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = 3CSynthIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.ios;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -831,7 +843,6 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = 3CSynthComponent/3CSynthComponent.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 853Q44S78Y;
 				INFOPLIST_FILE = 3CSynthComponent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -930,7 +941,6 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = 3CSynthComponent/3CSynthComponent.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 853Q44S78Y;
 				INFOPLIST_FILE = 3CSynthComponent/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -951,7 +961,6 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = 3CSynthAUMac/3CSynthAUMac.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 853Q44S78Y;
 				INFOPLIST_FILE = 3CSynthAUMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -972,12 +981,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 3CSynthMac/3CSynthMac.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 853Q44S78Y;
 				INFOPLIST_FILE = 3CSynthMac/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.mac;
 				SDKROOT = macosx;
@@ -991,10 +996,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = 3CSynthIOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.ios;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1006,7 +1008,6 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = 3CSynthAUMac/3CSynthAUMac.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 853Q44S78Y;
 				INFOPLIST_FILE = 3CSynthAUMac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1095,12 +1096,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = 3CSynthMac/3CSynthMac.entitlements;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 853Q44S78Y;
 				INFOPLIST_FILE = 3CSynthMac/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.3csynth.mac;
 				SDKROOT = macosx;

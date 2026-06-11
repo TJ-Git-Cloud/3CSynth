@@ -97,7 +97,7 @@ struct StateVariableFilter {
     /// Processes a single sample and returns all three simultaneous outputs.
     @inline(__always)
     private mutating func tick(input: Float) -> (lp: Float, bp: Float, hp: Float) {
-        let hp = (input - (k + g) * s1 - s2) * a1
+        let hp = (input - k * s1 - s2) * a1
         let bp = g * hp + s1
         let lp = g * bp + s2
 
