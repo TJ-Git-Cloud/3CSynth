@@ -120,6 +120,7 @@ final class Voice {
         // Set oscillator frequencies.
         updateFrequencies()
 
+        filter.reset()
         ampEnvelope.noteOn()
         filterEnvelope.noteOn()
         lfo1.reset()

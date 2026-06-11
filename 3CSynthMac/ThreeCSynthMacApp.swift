@@ -47,7 +47,7 @@ struct ThreeCSynthMacApp: App {
 final class ThreeCSynthMacAppModel {
 
     let engine      = SynthEngine()
-    let parameters  = SynthParameters()
+    var parameters: SynthParameters { engine.parameters }
     let presets     = PresetManager()
 
     private(set) var isRunning = false

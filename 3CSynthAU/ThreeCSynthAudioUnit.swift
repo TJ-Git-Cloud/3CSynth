@@ -29,10 +29,10 @@ public final class ThreeCSynthAudioUnit: AUAudioUnit {
 
     // MARK: Properties
 
-    /// Shared parameter model; also owned by the view controller for UI binding.
-    public let synthParameters = SynthParameters()
-
     private let engine = SynthEngine()
+
+    /// Shared parameter model; also owned by the view controller for UI binding.
+    public var synthParameters: SynthParameters { engine.parameters }
     private var _parameterTree: AUParameterTree!
     private var _outputBus: AUAudioUnitBus!
     private var _outputBusArray: AUAudioUnitBusArray!
